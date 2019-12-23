@@ -132,6 +132,8 @@ public class CameraSourcePreview extends ViewGroup {
   protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
     int width = 320;
     int height = 240;
+
+
     if (cameraSource != null) {
       Size size = cameraSource.getPreviewSize();
       if (size != null) {
@@ -163,6 +165,8 @@ public class CameraSourcePreview extends ViewGroup {
     for (int i = 0; i < getChildCount(); ++i) {
       getChildAt(i).layout(0, 0, childWidth, childHeight);
       Log.d(TAG, "Assigned view: " + i);
+      Log.d(TAG, "Assigned view: width: " + childWidth + " height: " + childHeight);
+
     }
 
     try {

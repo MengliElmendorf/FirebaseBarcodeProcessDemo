@@ -1,4 +1,4 @@
-package com.vormittag.firebasebarcodescan
+package com.vormittag.firebasebarcodescan.ImageProcessor
 
 import android.graphics.Bitmap
 import android.util.Log
@@ -7,6 +7,7 @@ import com.google.firebase.ml.vision.FirebaseVision
 import com.google.firebase.ml.vision.common.FirebaseVisionImage
 import com.google.firebase.ml.vision.label.FirebaseVisionImageLabel
 import com.google.firebase.ml.vision.label.FirebaseVisionImageLabeler
+import com.vormittag.firebasebarcodescan.common.VisionProcessorBase
 import com.vormittag.firebasebarcodescan.common.CameraImageGraphic
 import com.vormittag.firebasebarcodescan.common.FrameMetadata
 import com.vormittag.firebasebarcodescan.common.GraphicOverlay
@@ -40,7 +41,8 @@ class ImageLabelingProcessor : VisionProcessorBase<List<FirebaseVisionImageLabel
             val imageGraphic = CameraImageGraphic(graphicOverlay, image)
             graphicOverlay.add(imageGraphic)
         }
-        val labelGraphic = LabelGraphic(graphicOverlay, labels)
+        val labelGraphic =
+            LabelGraphic(graphicOverlay, labels)
         graphicOverlay.add(labelGraphic)
         graphicOverlay.postInvalidate()
     }

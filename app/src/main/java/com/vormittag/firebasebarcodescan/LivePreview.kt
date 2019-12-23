@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.google.firebase.ml.common.FirebaseMLException
+import com.vormittag.firebasebarcodescan.TextProcessor.TextRecognitionProcessor
 import com.vormittag.firebasebarcodescan.common.CameraSource
 import com.vormittag.firebasebarcodescan.common.CameraSourcePreview
 import com.vormittag.firebasebarcodescan.common.GraphicOverlay

@@ -1,4 +1,4 @@
-package com.vormittag.firebasebarcodescan
+package com.vormittag.firebasebarcodescan.ImageProcessor
 
 import android.graphics.Canvas
 import android.graphics.Color

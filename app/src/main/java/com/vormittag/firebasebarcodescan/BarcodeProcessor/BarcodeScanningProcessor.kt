@@ -15,6 +15,7 @@ import com.google.firebase.samples.apps.mlkit.kotlin.barcodescanning.BarcodeGrap
 import com.vormittag.firebasebarcodescan.common.CameraImageGraphic
 import com.vormittag.firebasebarcodescan.common.FrameMetadata
 import com.vormittag.firebasebarcodescan.common.GraphicOverlay
+import com.vormittag.firebasebarcodescan.common.VisionProcessorBase
 import java.io.IOException
 
 /** Barcode Detector Demo.  */

@@ -11,7 +11,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-package com.vormittag.firebasebarcodescan;
+package com.vormittag.firebasebarcodescan.TextProcessor;
 
 import android.graphics.Bitmap;
 import android.util.Log;
@@ -24,6 +24,7 @@ import com.google.firebase.ml.vision.FirebaseVision;
 import com.google.firebase.ml.vision.common.FirebaseVisionImage;
 import com.google.firebase.ml.vision.text.FirebaseVisionText;
 import com.google.firebase.ml.vision.text.FirebaseVisionTextRecognizer;
+import com.vormittag.firebasebarcodescan.common.VisionProcessorBase;
 import com.vormittag.firebasebarcodescan.common.CameraImageGraphic;
 import com.vormittag.firebasebarcodescan.common.FrameMetadata;
 import com.vormittag.firebasebarcodescan.common.GraphicOverlay;

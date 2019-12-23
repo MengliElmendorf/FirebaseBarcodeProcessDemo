@@ -1,14 +1,10 @@
-package com.vormittag.firebasebarcodescan
+package com.vormittag.firebasebarcodescan.common
 
 import android.graphics.Bitmap
 import androidx.annotation.GuardedBy
 import com.google.android.gms.tasks.Task
 import com.google.firebase.ml.vision.common.FirebaseVisionImage
 import com.google.firebase.ml.vision.common.FirebaseVisionImageMetadata
-import com.vormittag.firebasebarcodescan.common.BitmapUtils
-import com.vormittag.firebasebarcodescan.common.FrameMetadata
-import com.vormittag.firebasebarcodescan.common.GraphicOverlay
-import com.vormittag.firebasebarcodescan.common.VisionImageProcessor
 import java.nio.ByteBuffer
 
 /**
