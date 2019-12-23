@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "348368121628",
+    "firebase_url": "https://fir-barcodescan-cff2c.firebaseio.com",
+    "project_id": "fir-barcodescan-cff2c",
+    "storage_bucket": "fir-barcodescan-cff2c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:348368121628:android:6d0a4bbbbf4915089a14d9",
+        "android_client_info": {
+          "package_name": "com.vormittag.firebasebarcodescan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "348368121628-49ink1ov1qmrj0dd2b4eg0rqkv7igdic.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUalsfDOXk--ZBkNLLnZtpniR1-i7xkkA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "348368121628-49ink1ov1qmrj0dd2b4eg0rqkv7igdic.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
