@@ -1,4 +1,4 @@
-## FirebaseBarcodeProcessDemo can be use as a Library Project import into your other android Project
+## FirebaseBarcodeProcessDemo can be use as a library import into your other android project
   #### 1. If your android project haven't configure Kotlin in project, you will need to configure Kotlin in your android project by doing following process:
      - Tools -> Kotlin -> Configure Kotlin in Project
   #### 2. Create .AAR file:
