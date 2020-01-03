@@ -54,9 +54,14 @@ class MainActivity : AppCompatActivity() {
                 var barcodeString = data!!.getStringExtra("barcodeString")
                 Log.v(TAG, "onActivityResult $barcodeString ")
                 barcodeInput!!.setText(barcodeString)
+                //GS128Processor(barcodeString)
             }
         }
     }
+
+
+
+
 }
 
 

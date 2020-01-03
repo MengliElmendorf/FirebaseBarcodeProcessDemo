@@ -5,7 +5,6 @@ import android.app.Activity
 import android.content.Intent
 import android.graphics.Bitmap
 import android.util.Log
-import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.tasks.Task
 import com.google.firebase.ml.vision.FirebaseVision
 import com.google.firebase.ml.vision.barcode.FirebaseVisionBarcode
@@ -19,7 +18,7 @@ import com.vormittag.firebasebarcodescan.common.VisionProcessorBase
 import java.io.IOException
 
 /** Barcode Detector Demo.  */
-class BarcodeScanningProcessor(activity: AppCompatActivity) : VisionProcessorBase<List<FirebaseVisionBarcode>>() {
+class BarcodeScanningProcessor(activity: Activity) : VisionProcessorBase<List<FirebaseVisionBarcode>>() {
     val myActivity = activity;
     // Note that if you know which format of barcode your app is dealing with, detection will be
     // faster to specify the supported barcode formats one by one, e.g.

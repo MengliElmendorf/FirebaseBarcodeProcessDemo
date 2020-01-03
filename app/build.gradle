@@ -1,14 +1,25 @@
-apply plugin: 'com.android.application'
+//apply plugin: 'com.android.application'
+
+apply plugin: 'com.android.library'
+
 
 apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
 android {
+    signingConfigs {
+        release {
+            storeFile file('/Users/mengliyuan/Documents/AndroidCertificates/myandroidapps')
+            storePassword 'myandroidapps'
+            keyAlias = 'myandroidapps'
+            keyPassword 'myandroidapps'
+        }
+    }
     compileSdkVersion 29
     buildToolsVersion "29.0.0"
     defaultConfig {
-        applicationId "com.vormittag.firebasebarcodescan"
+        //applicationId "com.vormittag.firebasebarcodescan"
         minSdkVersion 23
         targetSdkVersion 29
         versionCode 1
@@ -19,6 +30,7 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
         }
     }
 }
@@ -35,6 +47,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-ml-vision:24.0.1'
     implementation 'com.google.firebase:firebase-ml-vision-barcode-model:16.0.2'
     implementation 'com.google.firebase:firebase-ml-vision-image-label-model:19.0.0'
+    implementation 'joda-time:joda-time:2.10.5'
+    implementation 'com.google.guava:guava:28.1-android'
 
 }
 

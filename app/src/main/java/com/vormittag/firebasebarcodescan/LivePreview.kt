@@ -1,10 +1,11 @@
 package com.vormittag.firebasebarcodescan
 
+import android.app.Activity
 import android.content.Context
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.util.Log
-import androidx.appcompat.app.AppCompatActivity
+import android.view.MenuItem
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.google.firebase.ml.common.FirebaseMLException
@@ -15,7 +16,7 @@ import com.vormittag.firebasebarcodescan.common.GraphicOverlay
 import kotlinx.android.synthetic.main.activity_live_preview.*
 import java.io.IOException
 
-class LivePreview : AppCompatActivity() {
+class LivePreview : Activity() {
     companion object {
         private const val PERMISSION_REQUESTS = 1
         private const val TAG = "LivePreviewActivity"
@@ -44,12 +45,11 @@ class LivePreview : AppCompatActivity() {
             }
         }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
+    public override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_live_preview)
-        val actionbar = supportActionBar
-        actionbar!!.title = "Live Preview"
-        actionbar.setDisplayHomeAsUpEnabled(true)
+        Log.v(TAG, "onCreate called")
+
 
         var bundle :Bundle ?=intent.extras
         selectedModel = bundle!!.getString("mode", BARCODE_OPTION)
@@ -70,9 +70,14 @@ class LivePreview : AppCompatActivity() {
         }
     }
 
-    override fun onSupportNavigateUp(): Boolean {
-        onBackPressed()
-        return true
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        val id = item.itemId
+        if (id == android.R.id.home) {
+            finish()
+            return true
+        }
+        return super.onOptionsItemSelected(item)
     }
 
     public override fun onResume() {
