@@ -13,5 +13,17 @@
         implementation 'com.google.firebase:firebase-ml-vision-barcode-model:16.0.2'
         implementation 'com.google.firebase:firebase-ml-vision-image-label-model:19.0.0'
         implementation project (":FirebaseBarcodeScanerLib")
+  #### 5. Usage example:
+      - In place need for scanning add this:
+         Intent intent = new Intent(this, LivePreview.class);
+         intent.putExtra("mode", "Barcode");
+         startActivityForResult(intent, LIVE_PREVIEW);
+         
+      - In onActivityResult add this:
+          if (requestCode == LIVE_PREVIEW) {
+            if (resultCode == Activity.RESULT_OK) {
+                String barcodeString = data.getStringExtra("barcodeString");
+            }
+        }
      
     
